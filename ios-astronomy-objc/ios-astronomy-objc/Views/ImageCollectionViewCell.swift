@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ImageCollectionViewCell.swift
 //  ios-astronomy-objc
 //
 //  Created by De MicheliStefano on 09.10.18.
 //  Copyright © 2018 De MicheliStefano. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+import UIKit
 
-@interface ViewController : UIViewController
-
-
-@end
-
+class ImageCollectionViewCell: UICollectionViewCell {
+    
+}
