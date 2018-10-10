@@ -43,6 +43,7 @@
                                     <constraint firstItem="sCP-Pf-U8L" firstAttribute="leading" secondItem="jYV-GP-1JF" secondAttribute="leading" id="ji4-Bd-SfQ"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="imageView" destination="sCP-Pf-U8L" id="OVi-08-NBQ"/>
                                     <segue destination="96Y-es-gfX" kind="show" identifier="ShowRoverDetail" id="nZc-y9-Xa8"/>
                                 </connections>
                             </collectionViewCell>
