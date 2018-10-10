@@ -4,3 +4,5 @@
 
 #import "STDMarsPhoto.h"
 #import "STDMarsRoverClient.h"
+#import "STDPhotoFetchOperation.h"
+
