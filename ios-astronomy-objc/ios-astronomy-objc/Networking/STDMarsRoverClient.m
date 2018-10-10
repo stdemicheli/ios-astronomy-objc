@@ -74,8 +74,6 @@
         }
         
         if (photoDictionaries) {
-            self.internalPhotos = photoDictionaries;
-            
             for (NSDictionary *photoDictionary in photoDictionaries) {
                 STDMarsPhoto *photo = [[STDMarsPhoto alloc] initWithDictionary:photoDictionary];
                 if (photo) {
@@ -91,10 +89,16 @@
     }] resume];
 }
 
-- (void)setInternalPhotos:(NSMutableArray<STDMarsPhoto *> *)internalPhotos
+- (UIImage *)getImageFromURL:(NSURL *)url
 {
-    self.internalPhotos = [internalPhotos mutableCopy];
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL:url];
+    return [UIImage imageWithData:imageData];
 }
+
+//- (void)setInternalPhotos:(NSMutableArray<STDMarsPhoto *> *)internalPhotos
+//{
+//    self.internalPhotos = [internalPhotos mutableCopy];
+//}
 
 static NSString * const baseUrlString = @"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos";
 static NSString * const apiKey = @"";

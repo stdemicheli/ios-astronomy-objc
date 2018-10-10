@@ -12,13 +12,15 @@ class MarsRoverCollectionViewController: UICollectionViewController {
 
     // MARK: Properties
     
-    let marsRoverClient = STDMarsRoverClient()
+    let marsRoverClient = MarsRoverClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         marsRoverClient.fetchPhotos(fromRover: "curiosity", sol: 1000) { (photos, error) in
-            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
 

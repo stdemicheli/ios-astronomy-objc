@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "STDMarsRover.h"
 #import "STDMarsPhoto.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+NS_SWIFT_NAME(MarsRoverClient)
 @interface STDMarsRoverClient : NSObject
 
 - (instancetype)init;
 - (void)fetchMarsRoverWithName:(NSString *)name sol:(NSInteger)sol completion:(void (^)(STDMarsRover *rover, NSError *))completion;
 - (void)fetchPhotosFromRover:(NSString *)rover sol:(NSInteger)sol completion:(void (^)(NSArray<STDMarsPhoto *> *photos, NSError *))completion;
+- (UIImage *)getImageFromURL:(NSURL *)url;
 
 @property (nonatomic, readonly) NSArray<STDMarsPhoto *> *photos;
 
